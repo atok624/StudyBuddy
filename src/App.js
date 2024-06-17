@@ -3,6 +3,7 @@ import SignIn from "./component/SignIn";
 import SignUp from "./component/SignUp";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Main from "./pages/Main";
+import DashBoard from './pages/DashBoard';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/dashboard" element={<DashBoard />} />
         </Routes>
       </Router>
     </div>
