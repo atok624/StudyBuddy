@@ -1,0 +1,25 @@
+.main-page {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .display-4 {
+    font-weight: bold;
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-lg {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.25rem;
+  }
+  
+  .min-vh-100 {
+    min-height: 100vh;
+  }
+  
