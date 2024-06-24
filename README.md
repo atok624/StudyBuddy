@@ -30,7 +30,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# Purpool Chat Application <a name="about-project"></a>
+# StudyBuddy <a name="about-project"></a>
 
 > Welcome to the StudyBuddy! This is a personal assistant created for students to help them manage their life in school. The buddy can serve them with reminders, help them manage their expenses, and be able to take notes even in class. 
 
@@ -46,25 +46,17 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://github.com/microverseinc/linters-config/tree/master/ror">Linters</a></li>
+    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+    <li><a href="https://www.javascript.com/">JavaScript</a></li>
     <li><a href="https://react.dev/">React.js</a></li>
-    <li><a href="https://redux.js.org/">Redux</a></li>
   </ul>
 </details>
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://rubyonrails.org/">ROR</a></li>
+    <li><a href="https://firebase.google.com/">FireBase</a></li>
   </ul>
 </details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
-
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
@@ -72,8 +64,8 @@
 ```
 User Authentication: Secure login and signup pages for user authentication. 
 Dash: Shows the activities of a particular user
-Notes: User can create, edit and delete notes
-Reminders: User can set reminders for a particular task
+Notes: The user can create, edit, and delete notes
+Reminders: The user can set reminders for a particular task
 Expenses: User can track their expenses
 ```
 
