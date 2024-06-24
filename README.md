@@ -1,70 +1,190 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+<img src="./../my-project/public/images/kk-removebg-preview.png" width="400px" alt="Purpool Logo" />
 
-## Available Scripts
+</div>
+<!-- TABLE OF CONTENTS -->
 
-In the project directory, you can run:
+# 📗 Table of Contents
 
-### `npm start`
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 StudyBuddy ](#-StudyBuddy)
+  - [Live Demo](#live-demo)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [❓ FAQ (OPTIONAL) ](#-faq-optional-)
+  - [📝 License ](#-license-)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- PROJECT DESCRIPTION -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Purpool Chat Application <a name="about-project"></a>
 
-### `npm test`
+> Welcome to the StudyBuddy! This is a personal assistant created for students to help them manage their life in school. The buddy can serve them with reminders, help them manage their expenses, and be able to take notes even in class. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Live Demo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Live Demo Link](#)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠 Built With <a name="built-with"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tech Stack <a name="tech-stack"></a>
 
-### `npm run eject`
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://github.com/microverseinc/linters-config/tree/master/ror">Linters</a></li>
+    <li><a href="https://react.dev/">React.js</a></li>
+    <li><a href="https://redux.js.org/">Redux</a></li>
+  </ul>
+</details>
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://rubyonrails.org/">ROR</a></li>
+  </ul>
+</details>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- Features -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Key Features <a name="key-features"></a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+User Authentication: Secure login and signup pages for user authentication. 
+Dash: Shows the activities of a particular user
+Notes: User can create, edit and delete notes
+Reminders: User can set reminders for a particular task
+Expenses: User can track their expenses
+```
 
-## Learn More
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 💻 Getting Started <a name="getting-started"></a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prerequisites
 
-### Code Splitting
+To run this project you need to configure your code editor with HTML, CSS & JS, and some other important extensions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Setup
 
-### Analyzing the Bundle Size
+```
+git clone https://github.com/atok624/StudyBuddy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Install
 
-### Making a Progressive Web App
+Install this project with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+git clone https://github.com/atok624/StudyBuddy
+```
 
-### Advanced Configuration
+### Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To run the project, execute the following command:
 
-### Deployment
+```
+  cd StudyBuddy
+  npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  npm start
+```
 
-### `npm run build` fails to minify
+### Run tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Not available for now
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Nicholas Amissah 💻**
+- GitHub: [Github](https://github.com/atok624)
+- Twitter: [Twitter](https://twitter.com/mysticalamissah)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/nicholas-amissah-153b09154)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- **Signup page**
+- **Login page**
+- **Dashboard**
+- **Notes page**
+- **Reminder page**
+- **Expense page**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project, please clone it and try it. I know you're going to love it
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+We would like to thank ```Emmanuel Fiifi Essel``` and ``` Roberta Akoto``` for their love and encouragement. We'd also like to thank Generation Ghana(staff, mentors, reviewers) for giving us the knowledge to build an amazing project like this.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ (optional) -->
+
+## ❓ FAQ (OPTIONAL) <a name="faq"></a>
+
+- **Can I fork the project and make a contribution?**
+
+  Of course, you can! First, fork it and contribute to it.
+
+- **How should I ask a pull request**
+
+  - Step 1: Click on the pull request button
+  - Step 2: create pull request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
