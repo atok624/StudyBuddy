@@ -1,3 +1,4 @@
+import "./Login.css";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import React, { useState } from "react";
 import { auth } from "../config/firebase";
@@ -9,8 +10,8 @@ const SignUp = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [image, setImage] = useState(null); // State for the image file
-  const [isLoading, setIsLoading] = useState(false); // Track loading state
+  const [image, setImage] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [avatar, setAvatar] = useState({
     file: null,
@@ -23,7 +24,7 @@ const SignUp = () => {
         file: e.target.files[0],
         url: URL.createObjectURL(e.target.files[0]),
       });
-      setImage(e.target.files[0]); // Update the image state
+      setImage(e.target.files[0]);
     }
   };
 
@@ -33,8 +34,8 @@ const SignUp = () => {
       setError("Please upload an image.");
       return;
     }
-    setIsLoading(true); // Start loading state
-    setError(null); // Clear previous errors
+    setIsLoading(true);
+    setError(null);
 
     try {
       const result = await createUserWithEmailAndPassword(
@@ -66,59 +67,102 @@ const SignUp = () => {
       console.error("Error signing up with Email:", error);
       setError(error.message);
     } finally {
-      setIsLoading(false); // End loading state
+      setIsLoading(false);
     }
   };
 
   return (
-    <div>
-      <h3>Sign Up</h3>
-      {isLoading && <p>Loading...</p>} {/* Display loading indicator */}
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <form onSubmit={signUpWithEmail}>
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          placeholder="Username"
-          required
-        />
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          required
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-          required
-        />
-        <label htmlFor="file">
-          <img
-            className="avatar"
-            src={avatar.url || "./avatar.png"}
-            alt="User's Avatar"
-          />
-        </label>
-        <input
-          type="file"
-          id="file"
-          style={{ display: "none" }}
-          onChange={handleAvatar}
-          accept="image/*" // Specify accepted file types
-        />
-        <button type="button" onClick={() => document.getElementById('file').click()}>Upload Image</button>
-        <button type="submit" disabled={isLoading}>
-          {isLoading ? "Signing Up..." : "Sign Up With Email"}
-        </button>
-      </form>
-      <button onClick={() => navigate("/signin")}>
-        Already have an account? Sign In
-      </button>
+    <div className="contain">
+      <div className="row align-items-center row--first rounded">
+        <div className="col-md-6 p-0">
+          <div className="card p-4 shadow">
+            <h3 className="mb-3 text-center">Sign Up</h3>
+            {isLoading && <p>Loading...</p>}
+            {error && <p style={{ color: "red" }}>{error}</p>}
+            <form onSubmit={signUpWithEmail} className="centered-form">
+              <div className="form-group d-flex flex-column justify-content-center">
+                <div className="d-flex justify-content-center">
+                <label htmlFor="file">
+                  <img
+                    className="avatar mb-2"
+                    src={avatar.url || "./avatar.png"}
+                    alt="User's Avatar"
+                    style={{ cursor: "pointer" }}
+                  />
+                </label><br/>
+                <input
+                  type="file"
+                  id="file"
+                  style={{ display: "none" }}
+                  onChange={handleAvatar}
+                  accept="image/*"
+                />
+
+                </div>
+                
+                <div className="d-flex justify-content-center">
+                <button
+                  type="button"
+                  className=" btn btn-secondary btn-block text-center w-50 upload_img p-0"
+                  onClick={() => document.getElementById("file").click()}
+                >
+                  Upload Image
+                </button>
+
+                </div>
+              </div>
+              <div className="form-group">
+                <input
+                  type="text"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  placeholder="Username"
+                  className="form-control"
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Email"
+                  className="form-control"
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Password"
+                  className="form-control"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                className="btn btn-primary btn-block w-100"
+                disabled={isLoading}
+              >
+                {isLoading ? "Signing Up..." : "Sign Up With Email"}
+              </button>
+            </form>
+            <button
+              type="button"
+              className="btn"
+            >
+              Have an account already?<a href="/signin" className="link" onClick={() => navigate("/signup")}> Sign In</a> 
+            </button>
+          </div>
+        </div>
+        <div className="col-md-6 text-center">
+          <img src="/images/kk-removebg-preview.png" alt="" className="img-fluid mb-4" />
+          <h2>Kampus Kampanion</h2>
+          <p>Your number one app to help you stay organized</p>
+        </div>
+      </div>
     </div>
   );
 };

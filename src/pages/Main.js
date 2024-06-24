@@ -1,24 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import "./Main.css"
+import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
+  const navigate = useNavigate();
   return (
-    <div className="container-fluid welcome-page">
-      <div className="row">
-        <div className="col-md-6 welcome-content">
-          <div className="jumbotron">
-            <h1 className="display-3">Welcome to Kampus Kampanion</h1>
-            <p className="lead">Your go-to platform for campus life and community</p>
-            <hr className="my-4" />
-            <p>Get started by signing in or signing up below.</p>
-            <p className="lead">
-              <Link to="/signin" className="btn btn-primary btn-lg">Sign In</Link>{' '}
-              <Link to="/signup" className="btn btn-secondary btn-lg">Sign Up</Link>
-            </p>
-          </div>
-        </div>
-        <div className="col-md-6 welcome-image">
-          <img src="https://via.placeholder.com/600x400" alt="Campus Life" className="img-fluid" />
+    <div className="welcome-page">
+      <div className="overlay"></div>
+      <div className="content text-center">
+        <h1 className="display-3">Kampus Kampanion</h1>
+        <p className="lead">Welcome to Kampus Kampanion, your number one app to help you stay organized and succeed in your academic journey!</p>
+        <div className="buttons mt-4">
+          <button className="btn btn-primary btn-lg mx-2" onClick={() => navigate('/signin')}>Sign In</button>
+          <button className="btn btn-outline-light btn-lg mx-2" onClick={() => navigate('/signup')}>Sign Up</button>
         </div>
       </div>
     </div>

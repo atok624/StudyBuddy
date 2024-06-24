@@ -1,0 +1,325 @@
+/* Add your CSS styles here */
+
+/* General body styles */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* App container styles */
+.App {
+    display: flex;
+}
+
+/* Sidebar component */
+/* Sidebar - Start */
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    width: 100px;
+    height: 100vh;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: rgba(113,99,186,255);
+}
+
+.sidebar:hover{
+    width: 250px;
+    transition: 0.5s ;
+}
+
+.logo{
+    width: 100px;
+    margin-bottom: 50px;
+}
+
+.logo img{
+    width: 100px;
+}
+
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0 1rem;
+}
+
+.menu li{
+    padding: 1rem 1.2rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover, .active{
+    background: #e0e0e058;
+}
+
+.menu a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu a span{
+    overflow: hidden;
+}
+
+.menu a i{
+    font-size:1.2rem;
+    padding-right: 10px;
+}
+
+.logout{
+    position: absolute;
+    bottom: 15%;
+    padding: 0 1rem;
+    width: 100%;
+}
+/* Sidebar - End */
+
+/* Main content styles */
+/* Main content - Start */
+.main--content{
+    position: relative;
+    background-color: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Main content - End */
+
+/* Header component */
+/* Header - Start */
+.header--wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 5%;
+    margin-bottom: 1rem;
+}
+
+.header--wrapper h2 span{
+    color: grey;
+    font-size: 18px;
+}
+
+.header--wrapper img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header--title{
+   color: rgba(113,99,186,255);
+}
+
+.user--info{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.search--box{
+    color: rgba(113,99,186,255);
+    background: rgba(237,237,237);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 12px;
+}
+
+.search--box input{
+    background: transparent;
+    padding: 10px;
+}
+
+.search--box i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.search--box i:hover{
+    transform: scale(1.2);
+}
+/* Header - End */
+
+/* Card container component */
+/* Card container - Start */
+.card--container{
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.card--wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main--title{
+    color: rgba(113,99,186,255);
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.payment--card{
+    background: rgba(223,223,223);
+    display: flex;
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 275px;
+    height: 150px;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+
+.payment--card:hover{
+    transform: translateY(-5px);
+}
+
+.card--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.amount{
+    display: flex;
+    flex-direction: column;
+}
+
+.amount--value{
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+.title{
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.icon{
+    color: #fff;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: red;
+}
+
+.card-detail{
+    font-size: 18px;
+    color: #777777;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+/* Card container - End */
+
+/* Table container component */
+/* Table container - Start */
+.tabular--wrapper{
+    background: white;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 2rem;
+}
+.table-container{
+    width: 100%;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead{
+    background: rgba(113,99,186,255);
+    color: white;
+}
+
+th{
+    
+    padding: 15px;
+    text-align: left;
+}
+
+tbody{
+    background: #f2f2f2;
+}
+td{
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+tr:nth-child(even){
+    background: white;
+}
+
+tfoot{
+    background: rgba(113,99,186,255);
+    font-weight: bold;
+    color: white;
+}
+
+tfoot td{
+    padding: 15px;
+}
+
+/* Table container - End */
+
+/* Css color */
+.light-red{
+    background: #FFADB0;
+}
+
+.light-purple{
+    background: #CBC3E3;
+}
+
+.light-green{
+    background: #A7F1A7;
+}
+
+.light-blue{
+    background: #7CC1D7;
+}
+
+.red{
+    background: red;
+}
+
+.purple{
+    background: purple;
+}
+
+.green{
+    background: green;
+}
+
+.blue{
+    background: blue;
+}
