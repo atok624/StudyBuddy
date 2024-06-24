@@ -1,25 +1,28 @@
-.main-page {
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    color: white;
-    text-align: center;
-    padding: 50px;
-  }
-  
-  .display-4 {
-    font-weight: bold;
-  }
-  
-  .lead {
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .btn-lg {
-    padding: 0.75rem 1.25rem;
-    font-size: 1.25rem;
-  }
-  
-  .min-vh-100 {
-    min-height: 100vh;
-  }
-  
+.welcome-page {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(135deg,rgba(113, 99, 186, 1), white, #e0e0e058, rgba(113, 99, 186, 1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.buttons .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.buttons .btn-outline-light {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.buttons .btn:hover {
+  opacity: 0.8;
+}
