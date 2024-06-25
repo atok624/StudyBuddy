@@ -159,7 +159,7 @@ const SignUp = () => {
         </div>
         <div className="col-md-6 text-center">
           <img src="/images/kk-removebg-preview.png" alt="" className="img-fluid mb-4" />
-          <h2>Kampus Kampanion</h2>
+          <h2>Study Buddy</h2>
           <p>Your number one app to help you stay organized</p>
         </div>
       </div>
