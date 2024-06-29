@@ -70,7 +70,7 @@ const SignIn = () => {
       <div className="row align-items-center row--first rounded">
         <div className="col-md-6 text-center">
           <img src="/images/kk-removebg-preview.png" alt="" className="first--logo"/>
-          <h2>Kampus Kampanion</h2>
+          <h2>Study Buddy</h2>
           <p>Your number one app to help you stay organized</p>
         </div>
         <div className="col-md-6 p-0">
@@ -102,11 +102,13 @@ const SignIn = () => {
                   required
                 />
               </div>
+              <div>
               <h6 className="text-center mb-3">
                 <a href="#" target="_blank">
                   Forgot password?
                 </a>
               </h6>
+              </div>
               <div>
                 <button
                   type="submit"

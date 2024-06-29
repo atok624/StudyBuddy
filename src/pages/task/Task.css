@@ -1,0 +1,90 @@
+/* src/App.css */
+
+
+
+.task--container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.task-form {
+    margin-bottom: 20px;
+}
+
+.task-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-form input[type="text"],
+.task-form input[type="date"],
+.task-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.task-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task-form button:hover {
+    background-color: #45a049;
+}
+
+.task-list {
+    margin-top: 20px;
+}
+
+.task {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.task.completed {
+    text-decoration: line-through;
+    background-color: #d9ffd9;
+}
+
+.task h3 {
+    margin-top: 0;
+}
+
+.task p {
+    margin: 5px 0;
+}
+
+.task button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task button:hover {
+    background-color: #0056b3;
+}

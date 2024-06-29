@@ -94,7 +94,8 @@
     position: relative;
     background-color: #ebe9e9;
     width: 100%;
-    padding: 1rem;
+    height: 100vh;
+    padding: 0.5rem;
 }
 
 /* Main content - End */
@@ -130,6 +131,7 @@
 
 .user--info{
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
 }
@@ -164,7 +166,7 @@
 /* Card container - Start */
 .card--container{
     background: #fff;
-    padding: 2rem;
+    padding: 0.5rem;
     border-radius: 10px;
 }
 
@@ -244,7 +246,7 @@
     background: white;
     margin-top: 1rem;
     border-radius: 10px;
-    padding: 2rem;
+    padding: 1rem;
 }
 .table-container{
     width: 100%;
