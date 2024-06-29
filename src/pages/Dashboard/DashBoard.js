@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './Dashboard.css';
 import Sidebar from '../../component/Sidebar';
@@ -17,8 +18,12 @@ function DashBoard() {
         <div className="card--container">
           <h3 className="main--title">Today's data</h3>
           <div className="card--wrapper">
-            <Card title="Payment Amount" amount="$1,234.56" icon="fas fa-dollar-sign icon red" backgroundColor={cardColors[0]} />
+            <Link to="/note"> {/* Wrap with Link component */}
+              <Card title="Payment Amount" amount="$1,234.56" icon="fas fa-dollar-sign icon red" backgroundColor={cardColors[0]} />
+            </Link>
+            <Link to="/task">
             <Card title="Payment Amount" amount="$1,234.56" icon="fas fa-list icon purple" backgroundColor={cardColors[1]} />
+            </Link>
             <Card title="Payment Amount" amount="$1,234.56" icon="fas fa-users icon green" backgroundColor={cardColors[2]} />
             <Card title="Payment Amount" amount="$1,234.56" icon="fas fa-check icon blue" backgroundColor={cardColors[3]} />
           </div>
