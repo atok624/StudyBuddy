@@ -1,28 +1,132 @@
+/* Calendar.css */
+
+/* Layout Container */
+.calendar-layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Calendar Container */
 .calendar-container {
-    margin-top: 20px;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+  flex: 1;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background for better contrast */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-right: 20px; /* Space between calendar and event list */
+}
+
+/* Event List Container */
+.event-list {
+  flex: 0.4;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.event-list h2 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.event-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.event-card {
+  padding: 15px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-card strong {
+  display: block;
+  font-size: 1.1em;
+  color: #007bff; /* Primary color for event titles */
+}
+
+.event-card p {
+  margin: 5px 0 0;
+  color: #555;
+}
+
+/* Calendar Toolbar */
+.fc-toolbar-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Event Styles */
+.fc-event {
+  color: #fff; /* White text for events */
+  border: none;
+}
+
+.fc-event.exam {
+  background-color: #dc3545; /* Red color for exams */
+}
+
+.fc-event.study {
+  background-color: #28a745; /* Green color for study sessions */
+}
+
+.fc-event:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* Modal Styles */
+.modal-content {
+  border-radius: 8px;
+}
+
+.modal-header {
+  background-color: #007bff; /* Primary color for header */
+  color: #fff;
+}
+
+.modal-body {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* Button Styles */
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .calendar-layout {
+    flex-direction: column;
   }
-  
-  .fc-toolbar {
-    display: flex;
-    justify-content: space-between;
+
+  .calendar-container {
+    margin-right: 0;
+    margin-bottom: 20px;
   }
-  
-  .fc .fc-button-primary {
-    background-color: rgba(113, 99, 186, 1);
-    border: none;
+
+  .fc {
+    font-size: 0.8em; /* Smaller font size for mobile */
   }
-  
-  .fc .fc-button-primary:hover {
-    background-color: #977fc1;
+
+  .fc-toolbar-title {
+    font-size: 1.2em; /* Adjust title size for mobile */
   }
-  
-  .fc-daygrid-event {
-    background-color: rgba(113, 99, 186, 1);
-    color: #fff;
-    border: none;
+
+  .event-list {
+    max-height: 50vh;
   }
-  
+}
