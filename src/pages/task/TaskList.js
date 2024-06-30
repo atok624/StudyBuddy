@@ -1,19 +1,22 @@
-import React from "react";
+// src/pages/task/TaskList.js
+import React from 'react';
 
 const TaskList = ({ tasks, deleteTask, completeTask, editTask }) => {
+  if (!tasks || tasks.length === 0) {
+    return <div>No tasks to display.</div>;
+  }
+
   return (
-    <div className="task-list">
-      {tasks.map((task, index) => (
-        <div key={index} className={`task ${task.completed ? "completed" : ""}`}>
-          <h3>{task.title}</h3>
-          <p>{task.description}</p>
-          <p>Due: {new Date(task.dueDate).toLocaleDateString()}</p>
-          <p>Category: {task.category}</p>
-          <button onClick={() => completeTask(task)}>
-            {task.completed ? "Undo" : "Complete"}
+    <div>
+      {tasks.map(task => (
+        <div key={task.id}>
+          <span>{task.title}</span>
+          {/* Additional task details and actions */}
+          <button onClick={() => deleteTask(task.id)}>Delete</button>
+          <button onClick={() => completeTask(task.id)}>
+            {task.completed ? 'Mark Incomplete' : 'Mark Complete'}
           </button>
           <button onClick={() => editTask(task)}>Edit</button>
-          <button onClick={() => deleteTask(task)}>Delete</button>
         </div>
       ))}
     </div>
