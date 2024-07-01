@@ -1,0 +1,52 @@
+/* src/index.css */
+body {
+    background-color: #e9e9e9;
+    color: rgba(113,99,186,255);
+  }
+  
+  h1 {
+    color: rgba(113,99,186,255);
+  }
+  
+  .container {
+    margin-top: 50px;
+  }
+  
+  .form-group label {
+    color: rgba(113,99,186,255);
+  }
+  
+  .form-control {
+    border-color: rgba(113,99,186,255);
+  }
+  
+  .form-control:focus {
+    border-color: rgba(113,99,186,255);
+    box-shadow: 0 0 5px rgba(113,99,186,255);
+  }
+  
+  button {
+    background-color: rgba(113,99,186,255);
+    color: #fff;
+  }
+  
+  button:hover {
+    background-color: rgba(113,99,186,0.8);
+  }
+  
+  .list-group-item {
+    background-color: #fff;
+    border: 1px solid rgba(113,99,186,255);
+    color: rgba(113,99,186,255);
+    margin-bottom: 10px;
+  }
+  
+  .list-group-item button {
+    background-color: rgba(113,99,186,255);
+    color: #fff;
+  }
+  
+  .list-group-item button:hover {
+    background-color: rgba(113,99,186,0.8);
+  }
+  
