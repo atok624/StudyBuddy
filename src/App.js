@@ -12,6 +12,8 @@ import Note from './pages/notes/Note';
 import Task from './pages/task/Task';
 import Calendar from './pages/calendar/Calendar';
 import { useState, useEffect } from 'react';
+import Expense from './pages/expense/Expense';
+import Reminder from './pages/reminders/Reminder';
 
 const App = () => {
   const [tasks, setTasks] = useState(() => {
@@ -67,6 +69,8 @@ const App = () => {
           <Route path="/note" element={<PrivateRoute><Note /></PrivateRoute>} />
           <Route path="/task" element={<PrivateRoute><Task tasks={tasks} addTask={addTask} deleteTask={deleteTask} completeTask={completeTask} editTask={editTask} /></PrivateRoute>} />
           <Route path="/calendar" element={<PrivateRoute><Calendar tasks={tasks} /></PrivateRoute>} />
+          <Route path="/expense" element={<PrivateRoute><Expense /></PrivateRoute>} />
+          <Route path="/reminder" element={<PrivateRoute><Reminder /></PrivateRoute>} />
         </Routes>
       </Router>
     </AuthProvider>
