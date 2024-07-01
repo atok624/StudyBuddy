@@ -1,45 +1,42 @@
 // ReminderProvider.js
 
 import React, { createContext, useState, useEffect } from 'react';
-
-export const ReminderContext = createContext();
+import { ReminderContext } from './ReminderContext';
 
 const ReminderProvider = ({ children }) => {
-  const [reminders, setReminders] = useState(
-    JSON.parse(localStorage.getItem('reminders')) || []
-  );
+  const [reminders, setReminders] = useState([]);
+
+  useEffect(() => {
+    const storedReminders = JSON.parse(localStorage.getItem('reminders')) || [];
+    setReminders(storedReminders);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('reminders', JSON.stringify(reminders));
   }, [reminders]);
 
-  useEffect(() => {
-    const checkRemindersInterval = setInterval(() => {
-      checkReminders();
-    }, 60000); // Check every minute
-
-    return () => clearInterval(checkRemindersInterval);
-  }, []);
-
-  const addReminder = (reminder) => {
-    setReminders([...reminders, { ...reminder, id: reminders.length + 1 }]);
+  const addReminder = (newReminder) => {
+    setReminders([...reminders, { ...newReminder, timesShown: 0 }]);
   };
 
   const removeReminder = (id) => {
     setReminders(reminders.filter((reminder) => reminder.id !== id));
   };
 
-  const checkReminders = () => {
-    const currentTime = new Date().getTime();
+  const showReminder = (reminder) => {
+    // Increment timesShown and update reminders
+    const updatedReminders = reminders.map((r) =>
+      r.id === reminder.id ? { ...r, timesShown: r.timesShown + 1 } : r
+    );
+    setReminders(updatedReminders);
 
-    reminders.forEach((reminder) => {
-      const reminderTime = new Date(reminder.datetime).getTime();
+    // Show notification here
+    showNotification(reminder);
 
-      if (currentTime >= reminderTime) {
-        showNotification(reminder);
-        removeReminder(reminder.id);
-      }
-    });
+    // Remove reminder after showing it 3 times
+    if (reminder.timesShown >= 2) {
+      removeReminder(reminder.id);
+    }
   };
 
   const showNotification = (reminder) => {
@@ -57,7 +54,7 @@ const ReminderProvider = ({ children }) => {
   };
 
   return (
-    <ReminderContext.Provider value={{ reminders, addReminder, removeReminder }}>
+    <ReminderContext.Provider value={{ reminders, addReminder, removeReminder, showReminder }}>
       {children}
     </ReminderContext.Provider>
   );
