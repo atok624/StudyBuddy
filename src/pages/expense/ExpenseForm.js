@@ -1,9 +1,9 @@
-// src/components/ExpenseForm.js
 import React, { useContext } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { ExpenseContext } from './ExpenseContext';
 import { Button, Form as BootstrapForm } from 'react-bootstrap';
+import './Expense.css';
 
 const ExpenseSchema = Yup.object().shape({
   description: Yup.string().required('Required'),
@@ -11,6 +11,7 @@ const ExpenseSchema = Yup.object().shape({
   category: Yup.string().required('Required'),
   date: Yup.date().required('Required'),
 });
+
 
 const ExpenseForm = () => {
   const { addExpense } = useContext(ExpenseContext);
@@ -29,12 +30,12 @@ const ExpenseForm = () => {
           <BootstrapForm.Group>
             <BootstrapForm.Label>Description</BootstrapForm.Label>
             <Field name="description" as={BootstrapForm.Control} />
-            <ErrorMessage name="description" component="div" />
+            <ErrorMessage name="description" component="div" className="error" />
           </BootstrapForm.Group>
           <BootstrapForm.Group>
             <BootstrapForm.Label>Amount</BootstrapForm.Label>
             <Field name="amount" as={BootstrapForm.Control} type="number" />
-            <ErrorMessage name="amount" component="div" />
+            <ErrorMessage name="amount" component="div" className="error" />
           </BootstrapForm.Group>
           <BootstrapForm.Group>
             <BootstrapForm.Label>Category</BootstrapForm.Label>
@@ -45,12 +46,12 @@ const ExpenseForm = () => {
               <option value="Entertainment" label="Entertainment" />
               <option value="Other" label="Other" />
             </Field>
-            <ErrorMessage name="category" component="div" />
+            <ErrorMessage name="category" component="div" className="error" />
           </BootstrapForm.Group>
           <BootstrapForm.Group>
             <BootstrapForm.Label>Date</BootstrapForm.Label>
             <Field name="date" as={BootstrapForm.Control} type="date" />
-            <ErrorMessage name="date" component="div" />
+            <ErrorMessage name="date" component="div" className="error" />
           </BootstrapForm.Group>
           <Button type="submit">Add Expense</Button>
         </Form>

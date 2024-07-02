@@ -102,7 +102,7 @@ const SignUp = () => {
                 
                 <div className="d-flex justify-content-center">
                 <button
-                  type="button"
+                  type="submit"
                   className=" btn btn-secondary btn-block text-center w-50 upload_img p-0"
                   onClick={() => document.getElementById("file").click()}
                 >
@@ -153,7 +153,7 @@ const SignUp = () => {
               type="button"
               className="btn"
             >
-              Have an account already?<a href="/signin" className="link" onClick={() => navigate("/signup")}> Sign In</a> 
+              Have an account already?<a href="/signin" className="link"> Sign In</a>
             </button>
           </div>
         </div>

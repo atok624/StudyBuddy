@@ -156,7 +156,7 @@ const SignIn = () => {
               type="button"
               className="btn"
             >
-              Need an account?<a href="/signup" className="link" onClick={() => navigate("/signup")}> Sign Up</a> 
+              Need an account?<a href="/signup" className="link"> Sign Up</a> 
             </button>
           </div>
         </div>
