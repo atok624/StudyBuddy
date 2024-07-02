@@ -55,19 +55,24 @@ const Task = () => {
       <div className="main--content">
         <Header />
         <div className="task--container">
-          <h1>Study Planner</h1>
-          <TaskForm
-            addTask={addTask}
-            editTask={editTask}
-            taskToEdit={taskToEdit}
-            setTaskToEdit={setTaskToEdit}
-          />
-          <TaskList
-            tasks={tasks}
-            deleteTask={deleteTask}
-            completeTask={completeTask}
-            editTask={setTaskToEdit} // Pass setTaskToEdit to TaskList
-          />
+          <div className="task--form">
+            <h2>Study Planner</h2>
+            <TaskForm
+              addTask={addTask}
+              editTask={editTask}
+              taskToEdit={taskToEdit}
+              setTaskToEdit={setTaskToEdit}
+            />
+          </div>
+          <div className="task--list">
+            <h2>Study List</h2>
+            <TaskList
+              tasks={tasks}
+              deleteTask={deleteTask}
+              completeTask={completeTask}
+              editTask={setTaskToEdit} // Pass setTaskToEdit to TaskList
+            />
+          </div>
         </div>
       </div>
     </div>

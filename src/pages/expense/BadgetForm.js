@@ -26,7 +26,7 @@ const BudgetForm = () => {
           <BootstrapForm.Group>
             <BootstrapForm.Label>Budget Amount</BootstrapForm.Label>
             <Field name="budgetAmount" as={BootstrapForm.Control} type="number" />
-            <ErrorMessage name="budgetAmount" component="div" />
+            <ErrorMessage name="budgetAmount" component="div" className="error" />
           </BootstrapForm.Group>
           <Button type="submit">Set Budget</Button>
         </Form>

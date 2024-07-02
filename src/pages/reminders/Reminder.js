@@ -1,32 +1,37 @@
-// App.js
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import ReminderProvider from "./ReminderContext";
+import ReminderForm from "./ReminderForm";
+import ReminderList from "./ReminderList";
+import Sidebar from "../../component/Sidebar";
+import Header from "../../component/Header";
 
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import ReminderProvider from './ReminderContext';
-import ReminderForm from './ReminderForm';
-import ReminderList from './ReminderList';
-
-
-const App = () => {
+const Reminder = () => {
   return (
-    <ReminderProvider>
-      <Container>
-        <Row>
-          <Col>
-            <h1>Walking Buddy - Reminder Manager</h1>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={6}>
-            <ReminderForm />
-          </Col>
-          <Col md={6}>
-            <ReminderList />
-          </Col>
-        </Row>
-      </Container>
-    </ReminderProvider>
+    <div className="App">
+      <Sidebar />
+      <div className="main--content">
+        <Header />
+        <ReminderProvider>
+          <Container>
+            <Row>
+              <Col>
+                <h1>Walking Buddy - Reminder Manager</h1>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={8}>
+                <ReminderForm />
+              </Col>
+              <Col md={4}>
+                <ReminderList />
+              </Col>
+            </Row>
+          </Container>
+        </ReminderProvider>
+      </div>
+    </div>
   );
 };
 
-export default App;
+export default Reminder;

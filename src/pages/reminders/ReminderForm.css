@@ -1,0 +1,33 @@
+.reminder-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    border: 1px solid rgba(113,99,186,255);
+  }
+  
+  .reminder-form .form-label {
+    color: rgba(113,99,186,255);
+  }
+  
+  .reminder-form .form-control {
+    border-radius: 4px;
+  }
+  
+  .reminder-form .form-control:focus {
+    border-color: rgba(113,99,186,255);
+    box-shadow: 0 0 5px rgba(113,99,186,255, 0.5);
+  }
+  
+  .reminder-form .btn-primary {
+    margin-top: 20px;
+    background-color: rgba(113,99,186,255);
+    border-color: rgba(113,99,186,255);
+  }
+  
+  .reminder-form .btn-primary:hover {
+    background-color: #6c63b7;
+    border-color: #6c63b7;
+  }
+  

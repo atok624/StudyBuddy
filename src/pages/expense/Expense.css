@@ -6,10 +6,37 @@ body {
   
   h1 {
     color: rgba(113,99,186,255);
+    font-size: 24px;
   }
   
   .container {
-    margin-top: 50px;
+    margin-top: 10px;
+  }
+
+  /* .second--container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  } */
+
+  .form{
+    background-color: #fff;
+    padding: 10px 20px;
+    margin-right: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    border: 1px solid rgba(113,99,186,255);
+  }
+
+  .list{
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    border: 1px solid rgba(113,99,186,255);
   }
   
   .form-group label {
@@ -26,6 +53,7 @@ body {
   }
   
   button {
+    margin-top: 10px;
     background-color: rgba(113,99,186,255);
     color: #fff;
   }
@@ -38,7 +66,7 @@ body {
     background-color: #fff;
     border: 1px solid rgba(113,99,186,255);
     color: rgba(113,99,186,255);
-    margin-bottom: 10px;
+    margin-bottom: 2px;
   }
   
   .list-group-item button {
@@ -49,4 +77,13 @@ body {
   .list-group-item button:hover {
     background-color: rgba(113,99,186,0.8);
   }
+
+  .error {
+    display: none;
+  }
+  
+  .form-control.is-invalid {
+    border-color: red;
+  }
+  
   
