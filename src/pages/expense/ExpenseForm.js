@@ -12,18 +12,19 @@ const ExpenseSchema = Yup.object().shape({
   date: Yup.date().required('Required'),
 });
 
-
 const ExpenseForm = () => {
   const { addExpense } = useContext(ExpenseContext);
+
+  const handleSubmit = (values, { resetForm }) => {
+    addExpense({ ...values, id: Date.now() });
+    resetForm();
+  };
 
   return (
     <Formik
       initialValues={{ description: '', amount: '', category: '', date: '' }}
       validationSchema={ExpenseSchema}
-      onSubmit={(values, { resetForm }) => {
-        addExpense({ ...values, id: Date.now() });
-        resetForm();
-      }}
+      onSubmit={handleSubmit}
     >
       {() => (
         <Form>

@@ -1,5 +1,3 @@
-// ReminderProvider.js
-
 import React, { createContext, useState, useEffect } from 'react';
 
 export const ReminderContext = createContext();

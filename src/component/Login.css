@@ -53,6 +53,8 @@ i{
 
 .link{
   text-decoration: none;
+  color: blue;
+  font-weight: 600;
 }
 
 .first--logo{

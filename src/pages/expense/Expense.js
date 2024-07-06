@@ -1,5 +1,3 @@
-// src/App.js
-
 import React from "react";
 import { ExpenseProvider } from "./ExpenseContext";
 import { Col, Container, Row } from "react-bootstrap";
@@ -7,7 +5,6 @@ import ExpenseForm from "./ExpenseForm";
 import ExpenseList from "./ExpenseList";
 import BudgetForm from "./BadgetForm";
 import ExpenseSummary from "./ExpenseSummary";
-import FilterSortControls from "./FilterSortControls";
 import Sidebar from "../../component/Sidebar";
 import Header from "../../component/Header";
 import './Expense.css'
@@ -31,7 +28,6 @@ const App = () => {
                 <ExpenseForm />
               </Col>
               <Col md={4} className="list">
-                <FilterSortControls />
                 <ExpenseSummary />
                 <ExpenseList />
               </Col>

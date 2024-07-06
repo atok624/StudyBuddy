@@ -3,7 +3,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import { signInWithPopup, signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { auth, provider, facebookProvider } from "../config/firebase";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -153,10 +153,11 @@ const SignIn = () => {
               </div>
             </form>
             <button
+              onClick = {() => navigate("/signup")}
               type="button"
               className="btn"
             >
-              Need an account?<a href="/signup" className="link"> Sign Up</a> 
+              Need an account?<span className="link"> Sign Up</span> 
             </button>
           </div>
         </div>
