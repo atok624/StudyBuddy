@@ -37,7 +37,7 @@
 
 ### Live Demo
 
-[Live Demo Link](#)
+[Live Demo Link](https://walking-buddy-636cb.web.app/)
 
 ## 🛠 Built With <a name="built-with"></a>
 
