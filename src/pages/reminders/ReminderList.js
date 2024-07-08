@@ -24,10 +24,12 @@ const ReminderList = () => {
         {reminders.map((reminder) => (
           <ListGroup.Item key={reminder.id} className="reminder-item">
             <div className="reminder-content">
-              <h5>{reminder.title}</h5>
-              <div><strong>Date & Time:</strong> {reminder.datetime}</div>
-              <div><strong>Description:</strong> {reminder.description}</div>
-              <div><strong>Priority:</strong> {reminder.priority}</div>
+              <h5 className="reminder-title">{reminder.title}</h5>
+              <div className="reminder-details">
+                <div><strong>Date & Time:</strong> <span>{reminder.datetime}</span></div>
+                <div><strong>Description:</strong> <span>{reminder.description}</span></div>
+                <div><strong>Priority:</strong> <span>{reminder.priority}</span></div>
+              </div>
             </div>
             <div className="reminder-actions">
               <Button variant="primary" onClick={() => handleShowConfirm(reminder.id)}>

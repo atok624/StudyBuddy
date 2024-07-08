@@ -1,16 +1,24 @@
 .welcome-page {
-  position: relative;
+  width: 100%;
   height: 100vh;
-  background: linear-gradient(135deg,rgba(113, 99, 186, 1), white, #e0e0e058, rgba(113, 99, 186, 1));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
+}
+
+video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .content {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
 }
 
 .buttons .btn-primary {
@@ -25,4 +33,13 @@
 
 .buttons .btn:hover {
   opacity: 0.8;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }

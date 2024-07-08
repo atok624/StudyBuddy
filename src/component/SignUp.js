@@ -76,7 +76,7 @@ const SignUp = () => {
       <div className="row align-items-center row--first rounded">
         <div className="col-md-6 p-0">
           <div className="card p-4 shadow">
-            <h3 className="mb-3 text-center">Sign Up</h3>
+            <h3 className="mb-1 text-center">Sign Up</h3>
             {isLoading && <p>Loading...</p>}
             {error && <p style={{ color: "red" }}>{error}</p>}
             <form onSubmit={signUpWithEmail} className="centered-form">
@@ -84,7 +84,7 @@ const SignUp = () => {
                 <div className="d-flex justify-content-center">
                 <label htmlFor="file">
                   <img
-                    className="avatar mb-2"
+                    className="avatar mb-1"
                     src={avatar.url || "./avatar.png"}
                     alt="User's Avatar"
                     style={{ cursor: "pointer" }}
@@ -150,16 +150,15 @@ const SignUp = () => {
               </button>
             </form>
             <button
-              onClick = {() => navigate("/signin")} 
               type="button"
               className="btn"
             >
-              Have an account already?<span className="link"> Sign In</span>
+              Have an account already?<span onClick = {() => navigate("/signin")}  className="link"> Sign In</span>
             </button>
           </div>
         </div>
         <div className="col-md-6 text-center">
-          <img src="/images/kk-removebg-preview.png" alt="" className="img-fluid mb-4" />
+          <img src="/images/kk-removebg-preview.png" alt="" className="img-fluid" />
           <h2>Study Buddy</h2>
           <p>Your number one app to help you stay organized</p>
         </div>

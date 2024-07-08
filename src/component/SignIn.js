@@ -9,12 +9,14 @@ const SignIn = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false); // Track loading state
+  const [isLoadingEmail, setIsLoadingEmail] = useState(false);
+  const [isLoadingGoogle, setIsLoadingGoogle] = useState(false);
+  const [isLoadingFacebook, setIsLoadingFacebook] = useState(false);
   const [error, setError] = useState(null);
 
   const signInWithGoogle = async () => {
-    setIsLoading(true); // Start loading state
-    setError(null); // Clear previous errors
+    setIsLoadingGoogle(true);
+    setError(null);
 
     try {
       const result = await signInWithPopup(auth, provider);
@@ -24,12 +26,12 @@ const SignIn = () => {
       console.error("Error signing in with Google:", error);
       setError(error.message);
     } finally {
-      setIsLoading(false); // End loading state
+      setIsLoadingGoogle(false);
     }
   };
 
   const signInWithFacebook = async () => {
-    setIsLoading(true); // Start loading state
+    setIsLoadingFacebook(true);
     setError(null);
 
     try {
@@ -40,7 +42,7 @@ const SignIn = () => {
       console.error("Error signing in with Facebook:", error);
       setError(error.message);
     } finally {
-      setIsLoading(false); // End loading state
+      setIsLoadingFacebook(false);
     }
   };
 
@@ -50,8 +52,8 @@ const SignIn = () => {
       setError("Please fill in both email and password.");
       return;
     }
-    setIsLoading(true); // Start loading state
-    setError(null); // Clear previous errors
+    setIsLoadingEmail(true);
+    setError(null);
 
     try {
       const result = await signInWithEmailAndPassword(auth, email, password);
@@ -61,7 +63,7 @@ const SignIn = () => {
       console.error("Error signing in with Email:", error);
       setError(error.message);
     } finally {
-      setIsLoading(false); // End loading state
+      setIsLoadingEmail(false);
     }
   };
 
@@ -75,8 +77,8 @@ const SignIn = () => {
         </div>
         <div className="col-md-6 p-0">
           <div className="card p-4 shadow">
-            <h2 className="mb-3 text-center">Sign in</h2>
-            {isLoading && <p>Loading...</p>}
+            <h2 className="mb-2 text-center">Sign in</h2>
+            {(isLoadingEmail || isLoadingFacebook || isLoadingGoogle) && <p>Loading...</p>}
             {error && <p style={{ color: "red" }}>{error}</p>}
             <form
               onSubmit={signInWithEmail}
@@ -103,7 +105,7 @@ const SignIn = () => {
                 />
               </div>
               <div>
-              <h6 className="text-center mb-3">
+              <h6 className="text-center mb-1">
                 <a href="#" target="_blank">
                   Forgot password?
                 </a>
@@ -113,9 +115,9 @@ const SignIn = () => {
                 <button
                   type="submit"
                   className="btn btn-primary btn-block w-100 p-1"
-                  disabled={isLoading}
+                  disabled={isLoadingEmail || isLoadingGoogle || isLoadingFacebook}
                 >
-                  {isLoading ? "Signing In..." : "Sign In with Email"}
+                  {isLoadingEmail ? "Signing In..." : "Sign In with Email"}
                 </button>
               </div>
               <hr />
@@ -123,11 +125,11 @@ const SignIn = () => {
               <div>
                 <button
                   type="button"
-                  className="btn btn-block m-1 w-100 p-1 border border-secondary bold-border"
+                  className="btn btn-block w-100 p-1 border border-secondary bold-border"
                   onClick={signInWithGoogle}
-                  disabled={isLoading}
+                  disabled={isLoadingEmail || isLoadingGoogle || isLoadingFacebook}
                 >
-                  {isLoading ? (
+                  {isLoadingGoogle ? (
                     "Signing In..."
                   ) : (
                     <>
@@ -137,11 +139,11 @@ const SignIn = () => {
                 </button>
                 <button
                   type="button"
-                  className="btn btn-block m-1 w-100 p-1 border border-primary bold-border"
+                  className="btn btn-block w-100 p-1 border border-primary bold-border"
                   onClick={signInWithFacebook}
-                  disabled={isLoading}
+                  disabled={isLoadingEmail || isLoadingGoogle || isLoadingFacebook}
                 >
-                  {isLoading ? (
+                  {isLoadingFacebook ? (
                     "Signing In..."
                   ) : (
                     <>
@@ -153,11 +155,10 @@ const SignIn = () => {
               </div>
             </form>
             <button
-              onClick = {() => navigate("/signup")}
               type="button"
               className="btn"
             >
-              Need an account?<span className="link"> Sign Up</span> 
+              Need an account?<span onClick={() => navigate("/signup")} className="link"> Sign Up</span> 
             </button>
           </div>
         </div>
