@@ -30,6 +30,11 @@ const NotesBoard = ({ notes, deleteNote, updateNote }) => {
     setModal(false);
   };
 
+  if (!notes || notes.length === 0) {
+    return <div className="notes-board">No tasks to display.</div>;
+  }
+
+
   return (
     <div className="notes-board">
       <h2>Your Notes</h2>

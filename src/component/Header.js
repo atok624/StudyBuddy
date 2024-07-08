@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth"; // Import Firebase auth functions
 
-function Header() {
+function Header({ searchInput, onSearchInputChange }) {
   const [user, setUser] = useState(null); // State to store user data
 
   useEffect(() => {
@@ -28,7 +28,12 @@ function Header() {
 
       <div className="search--box">
         <i className="fa-solid fa-search"></i>
-        <input type="text" placeholder="Search" />
+        <input
+          type="text"
+          placeholder="Search"
+          value={searchInput}
+          onChange={onSearchInputChange}
+        />
       </div>
       <div className="user--info">
         {user ? (

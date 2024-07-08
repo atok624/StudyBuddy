@@ -1,5 +1,3 @@
-/* Add your CSS styles here */
-
 /* General body styles */
 * {
     margin: 0;
@@ -17,7 +15,7 @@
 
 /* Sidebar component */
 /* Sidebar - Start */
-.sidebar{
+.sidebar {
     position: sticky;
     top: 0;
     left: 0;
@@ -27,42 +25,42 @@
     height: 100vh;
     overflow: hidden;
     transition: all 0.5s linear;
-    background: rgba(113,99,186,255);
+    background: rgba(113, 99, 186, 255);
 }
 
-.sidebar:hover{
+.sidebar:hover {
     width: 250px;
-    transition: 0.5s ;
+    transition: 0.5s;
 }
 
-.logo{
+.logo {
     width: 100px;
     margin-bottom: 50px;
 }
 
-.logo img{
+.logo img {
     width: 100px;
 }
 
-.menu{
+.menu {
     height: 88%;
     position: relative;
     list-style: none;
     padding: 0 1rem;
 }
 
-.menu li{
+.menu li {
     padding: 1rem 1.2rem;
     margin: 8px 0;
     border-radius: 8px;
     transition: all 0.5s ease-in-out;
 }
 
-.menu li:hover, .active{
+.menu li:hover, .active {
     background: #e0e0e058;
 }
 
-.menu a{
+.menu a {
     color: #fff;
     font-size: 14px;
     text-decoration: none;
@@ -71,16 +69,16 @@
     gap: 1rem;
 }
 
-.menu a span{
+.menu a span {
     overflow: hidden;
 }
 
-.menu a i{
-    font-size:1.2rem;
+.menu a i {
+    font-size: 1.2rem;
     padding-right: 10px;
 }
 
-.logout{
+.logout {
     position: absolute;
     bottom: 15%;
     padding: 0 1rem;
@@ -90,7 +88,7 @@
 
 /* Main content styles */
 /* Main content - Start */
-.main--content{
+.main--content {
     position: relative;
     background-color: #ebe9e9;
     width: 100%;
@@ -102,7 +100,7 @@
 
 /* Header component */
 /* Header - Start */
-.header--wrapper{
+.header--wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -113,32 +111,31 @@
     margin-bottom: 1rem;
 }
 
-.header--wrapper h2 span{
+.header--wrapper h2 span {
     color: grey;
-    font-size: 18px;
 }
 
-.header--wrapper img{
+.header--wrapper img {
     width: 50px;
     height: 50px;
     cursor: pointer;
     border-radius: 50%;
 }
 
-.header--title{
-   color: rgba(113,99,186,255);
+.header--title {
+   color: rgba(113, 99, 186, 255);
 }
 
-.user--info{
+.user--info {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
 
-.search--box{
-    color: rgba(113,99,186,255);
-    background: rgba(237,237,237);
+.search--box {
+    color: rgba(113, 99, 186, 255);
+    background: rgba(237, 237, 237);
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -146,44 +143,46 @@
     padding: 4px 12px;
 }
 
-.search--box input{
+.search--box input {
     background: transparent;
     padding: 10px;
 }
 
-.search--box i{
+.search--box i {
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.5s ease-out;
 }
 
-.search--box i:hover{
+.search--box i:hover {
     transform: scale(1.2);
 }
 /* Header - End */
 
 /* Card container component */
 /* Card container - Start */
-.card--container{
+.card--container {
     background: #fff;
     padding: 0.5rem;
     border-radius: 10px;
+    max-height: 500px; /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
-.card--wrapper{
+.card--wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
-.main--title{
-    color: rgba(113,99,186,255);
+.main--title {
+    color: rgba(113, 99, 186, 255);
     padding-bottom: 10px;
     font-size: 15px;
 }
 
-.payment--card{
-    background: rgba(223,223,223);
+.payment--card {
+    background: rgba(223, 223, 223);
     display: flex;
     border-radius: 10px;
     padding: 1.2rem;
@@ -194,35 +193,35 @@
     transition: all 0.5s ease-in-out;
 }
 
-.payment--card:hover{
+.payment--card:hover {
     transform: translateY(-5px);
 }
 
-.card--header{
+.card--header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.amount{
+.amount {
     display: flex;
     flex-direction: column;
 }
 
-.amount--value{
+.amount--value {
     font-size: 24px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 600;
 }
 
-.title{
+.title {
     font-size: 20px;
     color: #333;
     font-weight: 200;
 }
 
-.icon{
+.icon {
     color: #fff;
     padding: 1rem;
     height: 60px;
@@ -233,100 +232,100 @@
     background: red;
 }
 
-.card-detail{
+.card-detail {
     font-size: 18px;
     color: #777777;
     letter-spacing: 2px;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.no-underline{
+.no-underline {
     text-decoration: none;
 }
 /* Card container - End */
 
 /* Table container component */
 /* Table container - Start */
-.tabular--wrapper{
+.tabular--wrapper {
     background: white;
     margin-top: 1rem;
     border-radius: 10px;
     padding: 1rem;
 }
-.table-container{
+.table-container {
     width: 100%;
+    font-weight: 700;
 }
 
-table{
+table {
     border-collapse: collapse;
     width: 100%;
 }
 
-thead{
-    background: rgba(113,99,186,255);
+thead {
+    background: rgba(113, 99, 186, 255);
     color: white;
 }
 
-th{
-    
+th {
     padding: 15px;
     text-align: left;
 }
 
-tbody{
+tbody {
     background: #f2f2f2;
 }
-td{
+td {
     padding: 15px;
     font-size: 14px;
     color: #333;
 }
 
-tr:nth-child(even){
+tr:nth-child(even) {
     background: white;
 }
 
-tfoot{
-    background: rgba(113,99,186,255);
+tfoot {
+    background: rgba(113, 99, 186, 255);
     font-weight: bold;
     color: white;
 }
 
-tfoot td{
+tfoot td {
     padding: 15px;
 }
 
 /* Table container - End */
 
 /* Css color */
-.light-red{
+.light-red {
     background: #FFADB0;
 }
 
-.light-purple{
+.light-purple {
     background: #CBC3E3;
 }
 
-.light-green{
+.light-green {
     background: #A7F1A7;
 }
 
-.light-blue{
+.light-blue {
     background: #7CC1D7;
 }
 
-.red{
+.red {
     background: red;
 }
 
-.purple{
+.purple {
     background: purple;
 }
 
-.green{
+.green {
     background: green;
 }
 
-.blue{
+.blue {
     background: blue;
 }

@@ -24,7 +24,10 @@ const TaskList = ({ tasks, deleteTask, completeTask, editTask }) => {
   };
 
   const handleEditSubmit = () => {
-    editTask(editingTask.id, editedTask);
+    editTask({
+      ...editingTask, // Keep existing properties of editingTask
+      ...editedTask    // Update with edited properties
+    });
     closeModal();
   };
 
