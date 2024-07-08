@@ -12,8 +12,8 @@ import Note from './pages/notes/Note';
 import Task from './pages/task/Task';
 import Calendar from './pages/calendar/Calendar';
 import { useState, useEffect } from 'react';
-import Expense from './pages/expense/Expense';
 import Reminder from './pages/reminders/Reminder';
+import Expense from './pages/expense/Expense';
 
 const App = () => {
   const [tasks, setTasks] = useState(() => {

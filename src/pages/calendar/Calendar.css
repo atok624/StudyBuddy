@@ -1,12 +1,12 @@
 /* Calendar.css */
 
+
 /* Layout Container */
 .calendar-layout {
   display: flex;
   justify-content: space-between;
   padding: 20px;
 }
-
 /* Calendar Container */
 .calendar-container {
   flex: 1;

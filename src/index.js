@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import { ExpenseProvider } from './pages/expense/ExpenseContext';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { BudgetsProvider } from "./pages/expense/BudgetContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ExpenseProvider>
+    <BudgetsProvider>
       <App />
-    </ExpenseProvider>
+    </BudgetsProvider>
   </React.StrictMode>
 );

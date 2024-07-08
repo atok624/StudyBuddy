@@ -1,42 +1,32 @@
 import React from "react";
-import { ExpenseProvider } from "./ExpenseContext";
-import { Col, Container, Row } from "react-bootstrap";
-import ExpenseForm from "./ExpenseForm";
-import ExpenseList from "./ExpenseList";
-import BudgetForm from "./BadgetForm";
-import ExpenseSummary from "./ExpenseSummary";
-import Sidebar from "../../component/Sidebar";
-import Header from "../../component/Header";
-import './Expense.css'
+import { Button, Container, Stack } from "react-bootstrap";
+import BudgetCard from "./BudgetCard";
 
-const App = () => {
+const Expense = () => {
   return (
-    <div className="App">
-      <Sidebar />
-      <div className="main--content">
-        <Header />
-        <ExpenseProvider>
-          <Container>
-            <Row>
-              <Col>
-                <h1>Expense Tracker</h1>
-              </Col>
-            </Row>
-            <Row className="second--container">
-              <Col md={7} className="form">
-                <BudgetForm />
-                <ExpenseForm />
-              </Col>
-              <Col md={4} className="list">
-                <ExpenseSummary />
-                <ExpenseList />
-              </Col>
-            </Row>
-          </Container>
-        </ExpenseProvider>
+    <Container className="my-4">
+      <Stack direction="horizontal" gap="2" className="mb-4">
+        <h1 className="me-auto">Expense</h1>
+        <Button variant="primary">Add Budget</Button>
+        <Button variant="outline-primary">Add Expense</Button>
+      </Stack>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+          gap: "1rem",
+          alignItems: "flex-start",
+        }}
+      >
+        <BudgetCard
+          name="Entertainment"
+          gray
+          amount={1800}
+          max={1000}
+        ></BudgetCard>
       </div>
-    </div>
+    </Container>
   );
 };
 
-export default App;
+export default Expense;
