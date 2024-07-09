@@ -16,7 +16,7 @@ const Reminder = () => {
           <Container>
             <Row>
               <Col>
-                <h1>Walking Buddy - Reminder Manager</h1>
+                <h3>Reminder Manager</h3>
               </Col>
             </Row>
             <Row>

@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect, useCallback } from 'react';
 
 export const ReminderContext = createContext();
 
@@ -11,33 +11,34 @@ const ReminderProvider = ({ children }) => {
     localStorage.setItem('reminders', JSON.stringify(reminders));
   }, [reminders]);
 
+  const checkReminders = useCallback(() => {
+    const currentTime = new Date().getTime();
+    reminders.forEach((reminder) => {
+      const reminderTime = new Date(reminder.datetime).getTime();
+      if (currentTime >= reminderTime) {
+        showNotification(reminder);
+        removeReminder(reminder.id);
+      }
+    });
+  }, [reminders]);
+
   useEffect(() => {
     const checkRemindersInterval = setInterval(() => {
       checkReminders();
     }, 60000); // Check every minute
 
     return () => clearInterval(checkRemindersInterval);
-  }, []);
+  }, [checkReminders]);
 
   const addReminder = (reminder) => {
-    setReminders([...reminders, { ...reminder, id: reminders.length + 1 }]);
+    setReminders(prevReminders => [
+      ...prevReminders, 
+      { ...reminder, id: prevReminders.length ? prevReminders[prevReminders.length - 1].id + 1 : 1 }
+    ]);
   };
 
   const removeReminder = (id) => {
     setReminders(reminders.filter((reminder) => reminder.id !== id));
-  };
-
-  const checkReminders = () => {
-    const currentTime = new Date().getTime();
-
-    reminders.forEach((reminder) => {
-      const reminderTime = new Date(reminder.datetime).getTime();
-
-      if (currentTime >= reminderTime) {
-        showNotification(reminder);
-        removeReminder(reminder.id);
-      }
-    });
   };
 
   const showNotification = (reminder) => {
