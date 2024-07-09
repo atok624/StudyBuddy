@@ -123,12 +123,13 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Signup page**
-- **Login page**
-- **Dashboard**
-- **Notes page**
-- **Reminder page**
-- **Expense page**
+| Feature         | Image                                              | Feature         | Image                                              | Feature         | Image                                              |
+|-----------------|----------------------------------------------------|-----------------|----------------------------------------------------|-----------------|----------------------------------------------------|
+| **Welcome Page**| ![Welcome Page](./src/assests/Welcome.png)         | **Signup page** | ![Signup Page](./src/assests/Signup.png)           | **Login page**  | ![Login Page](./src/assests/SignIN.png)            |
+| **Dashboard**   | ![Dashboard](./src/assests/Dashboard.png)          | **Notes page**  | ![Notes Page](./src/assests/note.png)              | **Reminder page**| ![Reminder Page](./src/assests/Reminder.png)      |
+| **Expense page**| ![Expense Page](./src/assests/Expense.png)         | **Calendar**    | ![Calendar](./src/assests/calendar.png)            | **Study Planner** | ![Planner](./src/assests/Planner.png)            |
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
