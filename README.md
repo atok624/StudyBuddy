@@ -44,7 +44,7 @@
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Client</summary>
+  <summary>Frontend</summary>
   <ul>
     <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
     <li><a href="https://www.javascript.com/">JavaScript</a></li>
@@ -57,71 +57,17 @@
     <li><a href="https://firebase.google.com/">FireBase</a></li>
   </ul>
 </details>
+<details>
+  <summary>Libraries</summary>
+  <ul>
+    <li><a href="https://firebase.google.com/">fullCalendar</a></li>
+    <li><a href="https://firebase.google.com/">Formik</a></li>
+    <li><a href="https://firebase.google.com/">react-bootstrap</a></li>
+  </ul>
+</details>
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-
-```
-User Authentication: Secure login and signup pages for user authentication. 
-Dash: Shows the activities of a particular user
-Notes: The user can create, edit, and delete notes
-Reminders: The user can set reminders for a particular task
-Expenses: User can track their expenses
-```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 💻 Getting Started <a name="getting-started"></a>
-
-### Prerequisites
-
-To run this project you need to configure your code editor with HTML, CSS & JS, and some other important extensions
-
-### Setup
-
-```
-git clone https://github.com/atok624/StudyBuddy
-```
-
-### Install
-
-Install this project with:
-
-```
-git clone https://github.com/atok624/StudyBuddy
-```
-
-### Usage
-
-To run the project, execute the following command:
-
-```
-  cd StudyBuddy
-  npm install
-
-  npm start
-```
-
-### Run tests
-
-- Not available for now
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- AUTHORS -->
-
-## 👥 Authors <a name="authors"></a>
-
-👤 **Nicholas Amissah 💻**
-- GitHub: [Github](https://github.com/atok624)
-- Twitter: [Twitter](https://twitter.com/mysticalamissah)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/nicholas-amissah-153b09154)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
 
 ### **Welcome Page**
 ![Welcome Page](./src/assests/Welcome.png)
@@ -151,6 +97,52 @@ To run the project, execute the following command:
 ![Study Planner](./src/assests/Planner.png)
 
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+### Prerequisites
+
+To run this project you need to configure your code editor with HTML, CSS & JS, and some other important extensions
+
+
+
+### Install
+
+Install this project with:
+
+```
+git clone https://github.com/atok624/StudyBuddy
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+```
+  cd StudyBuddy
+  npm install
+
+  npm start
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Nicholas Amissah 💻**
+- GitHub: [Github](https://github.com/atok624)
+- Twitter: [Twitter](https://twitter.com/mysticalamissah)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/nicholas-amissah-153b09154)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+- **Weather API Integration**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
