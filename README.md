@@ -176,7 +176,8 @@ If you like this project, please clone it and try it. I know you're going to lov
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-We would like to thank ```Emmanuel Fiifi Essel``` and ``` Roberta Akoto``` for their love and encouragement. We'd also like to thank Generation Ghana(staff, mentors, reviewers) for giving us the knowledge to build an amazing project like this.
+I would like to thank **Emmanuel Fiifi Essel** and **Roberta Akoto** for their love and encouragement. I am also grateful to Generation Ghana for providing me with the knowledge to build an amazing project like this. Additionally, I appreciate **Seyram Abofra**, **Gideon Agyage**, **Frances Obaze**, and **Maris Amu** for their invaluable support and feedback.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
