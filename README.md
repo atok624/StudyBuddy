@@ -168,7 +168,7 @@ If you like this project, please clone it and try it. I know you're going to lov
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank **Emmanuel Fiifi Essel** and **Roberta Akoto** for their love and encouragement. I am also grateful to Generation Ghana for providing me with the knowledge to build an amazing project like this. Additionally, I appreciate **Seyram Abofra**, **Gideon Agyage**, **Frances Obaze**, and **Maris Amu** for their invaluable support and feedback.
+I want to thank **Emmanuel Fiifi Essel** and **Roberta Akoto** for the project idea. I am also grateful to Generation Ghana for providing me with the knowledge to build an amazing project like this. Also to **Code Info** for the idea for the dashboard. Additionally, I appreciate **Seyram Abofra**, **Gideon Agyage**, **Frances Obaze**, and **Maris Amu** for their invaluable support and feedback.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
