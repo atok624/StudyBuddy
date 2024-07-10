@@ -63,6 +63,7 @@
     <li><a href="https://firebase.google.com/">fullCalendar</a></li>
     <li><a href="https://firebase.google.com/">Formik</a></li>
     <li><a href="https://firebase.google.com/">react-bootstrap</a></li>
+    <li><a href="https://firebase.google.com/">react-quill</a></li>
   </ul>
 </details>
 <!-- Features -->
