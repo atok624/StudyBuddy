@@ -157,7 +157,7 @@ const SignUp = () => {
             </button>
           </div>
         </div>
-        <div className="col-md-6 text-center">
+        <div className="col-md-6 text-center hide">
           <img src="/images/kk-removebg-preview.png" alt="" className="img-fluid" />
           <h2>Study Buddy</h2>
           <p>Your number one app to help you stay organized</p>

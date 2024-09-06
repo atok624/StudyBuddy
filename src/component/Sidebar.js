@@ -23,7 +23,7 @@ function Sidebar() {
   };
 
   return (
-    <div className="sidebar">
+    <div className="sidebar hover">
       <div className="logo">
         <img src="/images/kk-removebg-preview.png" alt="Logo" />
       </div>

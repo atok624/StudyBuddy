@@ -130,4 +130,18 @@ body {
   .modal-footer button {
     margin-left: 10px;
   }
+
+  @media (max-width: 576px) {
+    .cover{
+      display: flex;
+      flex-direction: column;
+    }
+    .note-form {
+      width: 100%;
+    }
+    .notes-board {
+      background-color: #fff;
+      width: 100%;
+    }
+}
   

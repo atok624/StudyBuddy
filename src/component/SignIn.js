@@ -70,7 +70,7 @@ const SignIn = () => {
   return (
     <div className="contain">
       <div className="row align-items-center row--first rounded">
-        <div className="col-md-6 text-center">
+        <div className="col-md-6 text-center hide">
           <img src="/images/kk-removebg-preview.png" alt="" className="first--logo"/>
           <h2>Study Buddy</h2>
           <p>Your number one app to help you stay organized</p>

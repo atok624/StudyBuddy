@@ -10,7 +10,7 @@ function Card({ title, amount, icon, backgroundColor }) {
         </div>
         <i className={icon}></i>
       </div>
-      <span className="card-detail">**** **** **** 34</span>
+      <span className="card-detail">*** *** *** 34</span>
     </div>
   );
 }

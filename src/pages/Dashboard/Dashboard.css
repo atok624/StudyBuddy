@@ -16,19 +16,19 @@
 /* Sidebar component */
 /* Sidebar - Start */
 .sidebar {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     color: #fff;
     width: 100px;
-    height: 100vh;
-    overflow: hidden;
+    height: 100vh;/* Allow scrolling if content is taller than viewport */
+    z-index: 1000;
     transition: all 0.5s linear;
     background: rgba(113, 99, 186, 255);
 }
 
-.sidebar:hover {
+.hover:hover {
     width: 250px;
     transition: 0.5s;
 }
@@ -89,11 +89,14 @@
 /* Main content styles */
 /* Main content - Start */
 .main--content {
-    position: relative;
+    /* position: relative; */
+    margin-left: 100px;
     background-color: #ebe9e9;
     width: 100%;
     height: 100vh;
     padding: 0.5rem;
+    height: 100vh; /* Full height */
+    overflow-y: auto;
 }
 
 /* Main content - End */
@@ -171,6 +174,8 @@
 
 .card--wrapper {
     display: flex;
+    margin: auto;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 1rem;
 }
@@ -179,6 +184,7 @@
     color: rgba(113, 99, 186, 255);
     padding-bottom: 10px;
     font-size: 15px;
+    text-align: center;
 }
 
 .payment--card {
@@ -186,7 +192,7 @@
     display: flex;
     border-radius: 10px;
     padding: 1.2rem;
-    width: 275px;
+    width: 250px;
     height: 150px;
     flex-direction: column;
     justify-content: space-between;
@@ -329,3 +335,92 @@ tfoot td {
 .blue {
     background: blue;
 }
+
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 100px;
+    }
+    .sidebar.hover{
+        width: 100px;
+    }
+    }
+  /* For tablets (max-width: 768px) */
+  @media (max-width: 768px) {
+    .sidebar {
+        width: 100px;
+    }
+    .sidebar.hover{
+        width:100px;
+    }
+
+    .header--wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px 20px; /* Reduced padding for small screens */
+      }
+    
+      .user--info {
+        margin-top: 10px;
+        gap: 1rem;
+      }
+    
+      .search--box {
+        width: 100%;
+        margin-top: 10px;
+        padding: 5px 10px; /* Reduced padding */
+        display: flex;
+        justify-content: space-between;
+      }
+    
+      .search--box input {
+        width: 80%;
+        padding: 8px;
+      }
+    
+      .search--box i {
+        display: none; /* Hide the search icon */
+      }
+    
+      .header--wrapper img {
+        width: 40px;
+        height: 40px;
+      }
+    
+  }
+  
+  /* For mobile phones (max-width: 576px) */
+  @media (max-width: 576px) {
+    .sidebar {
+        width: 100px;
+    }
+
+    .sidebar.hover{
+        width: 100px;
+    }
+
+    .header--wrapper {
+        padding: 8px 10px; /* Even smaller padding */
+      }
+    
+      .header--title h2 {
+        font-size: 1.5rem;
+      }
+    
+      .user--info {
+        gap: 0.5rem;
+      }
+    
+      .user--info span {
+        display: none; /* Hide the user name */
+      }
+    
+      .search--box {
+        display: none; /* Hide search box on very small screens */
+      }
+    
+      .header--wrapper img {
+        width: 35px;
+        height: 35px;
+      }
+    
+  }
