@@ -1,9 +1,5 @@
 {
   "projects": {
-    "default": "walking-buddy-636cb",
-    "production": "walking-buddy-636cb"
-  },
-  "targets": {},
-  "etags": {},
-  "dataconnectEmulatorConfig": {}
+    "default": "walking-buddy-636cb"
+  }
 }
